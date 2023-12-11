@@ -1,1 +1,1 @@
-Projeto Base em Ruby usando Capybara/Cucumber
+Projeto Base pra automação utilizando Ruby com Capybara/Cucumber
