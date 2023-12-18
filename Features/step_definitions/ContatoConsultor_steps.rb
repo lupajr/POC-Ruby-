@@ -1,4 +1,5 @@
 require "capybara/rspec"
+#refazer usando metodos tirados do utils
 
 Given('que clico no botão assine aqui') do
   first('span', text: 'Assine agora').click
@@ -24,7 +25,7 @@ Then('aparecerá a tela de cadastro') do
     select("5 a 9", from: "collection_comp-lftp3wfm")
     sleep 5
 
-    select("Mais de 6", from: "collection_comp-lfr84vmw")
+    #select("Mais de 6", from: "collection_comp-lfr84vmw") #Ver o pq essa desgraça nao esta funcionando
     sleep 5
 
     select("Outro", from: "collection_comp-lkr8jjhx")

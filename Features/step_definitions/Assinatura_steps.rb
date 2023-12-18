@@ -10,25 +10,35 @@ Given('que estou na tela da clinicorp') do
 end
 
 When('clico no botão de assine agora') do
-  first('span', text: 'Assine agora').click
+  ClicarSpanText('Assine agora')
+
 end
 
 When('e clico plano Standard') do
-  find('span', text: 'Assinar Standard').click
+  ClicarSpanText('Assinar Standard')
+
 end
 
 Then('vejo a tela de login') do
   #find_by_id('fullName').set ("Lucas lindo e gostoso.mp3")
-  find_bind_id('fullName', 'Aqui é o bot do teste caramba!!')
-  find_by_id('clinicName').set ("Lucas lindo e gostoso.mp3")
-  find_by_id('documentNumber').set ("43499284804")
-  find_by_id('email').set ("lucas.gambarino@clinicorp.com")
-  find_by_id('personalPhone').set ("45984318619")
-  find_by_id('businessPhone').set ("38575438")
-  find_by_id('cep').set ("89255726")
-  find('span', text: 'Buscar Endereço').click
-  find_by_id('number').set ("123")
-  find_by_id('address_complement').set ("casa 1")
+  BuscarPorId('fullName', 'Aqui é o bot do teste caramba!!')
+  BuscarPorId('clinicName','Testasa')
+
+  BuscarPorId('documentNumber','43499284804')
+
+  BuscarPorId('email','luiz.martins@clinicorp.com')
+
+  BuscarPorId('personalPhone','45984318619')
+
+  BuscarPorId('businessPhone','38575438')
+
+  BuscarPorId('cep','58046780')
+
+  ClicarSpanText('Buscar Endereço')
+
+  BuscarPorId('number','22')
+
+  BuscarPorId('address_complement','apt 202')
 
 
 end
