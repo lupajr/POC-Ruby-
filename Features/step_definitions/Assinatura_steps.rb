@@ -1,5 +1,9 @@
 require "capybara/rspec"
 
+require_relative 'utils.rb'
+World(Utils)
+
+
 #-------------------------------------
 Given('que estou na tela da clinicorp') do
     visit ("https://www.clinicorp.com/")
@@ -14,7 +18,8 @@ When('e clico plano Standard') do
 end
 
 Then('vejo a tela de login') do
-  find_by_id('fullName').set ("Lucas lindo e gostoso.mp3")
+  #find_by_id('fullName').set ("Lucas lindo e gostoso.mp3")
+  find_bind_id('fullName', 'Aqui é o bot do teste caramba!!')
   find_by_id('clinicName').set ("Lucas lindo e gostoso.mp3")
   find_by_id('documentNumber').set ("43499284804")
   find_by_id('email').set ("lucas.gambarino@clinicorp.com")
@@ -24,6 +29,6 @@ Then('vejo a tela de login') do
   find('span', text: 'Buscar Endereço').click
   find_by_id('number').set ("123")
   find_by_id('address_complement').set ("casa 1")
-  
+
 
 end
