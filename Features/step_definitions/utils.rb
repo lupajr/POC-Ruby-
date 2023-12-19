@@ -6,7 +6,7 @@ module Utils
   end
 
   def ClicarSpanText(text)
-        find('span', text: text).click
+        all('span', text: text)[0].click
   end
 
 
