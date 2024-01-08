@@ -10,7 +10,8 @@ When('clico na opção falar com um consultar') do
 end
 
 Then('aparecerá a tela de cadastro') do
-    find_by_id('input_comp-lfr84vm61').set ('Aqui é o TesteTest')
+    BuscarPorId('input_comp-lfr84vm61','Aqui é o TesteTester')
+    #find_by_id('input_comp-lfr84vm61').set ('Aqui é o TesteTest')
     sleep 5
 
     find_by_id('input_comp-lfvcm08z').set ('Carlos@test.com')
