@@ -20,7 +20,7 @@ When('e clico plano Standard') do
 end
 
 Then('vejo a tela de login') do
-  #find_by_id('fullName').set ("Lucas lindo e gostoso.mp3")
+
   BuscarPorId('fullName', 'Aqui é o bot do teste caramba!!')
   BuscarPorId('clinicName','Testasa')
 

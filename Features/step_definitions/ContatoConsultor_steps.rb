@@ -25,7 +25,7 @@ Then('aparecerá a tela de cadastro') do
     select("5 a 9", from: "collection_comp-lftp3wfm")
     sleep 5
 
-    #select("Mais de 6", from: "collection_comp-lfr84vmw") #Ver o pq essa desgraça nao esta funcionando
+    select("Mais de 6", from: "collection_comp-lfr84vmw")
     sleep 5
 
     select("Outro", from: "collection_comp-lkr8jjhx")
