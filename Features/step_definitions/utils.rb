@@ -5,9 +5,20 @@ module Utils
     find("##{id}").set(value)
   end
 
-  def ClicarSpanText(text)
-        all('span', text: text)[0].click
+
+
+  def ClicarAssineAgora
+    Capybara.find('span', 'Assine agora')[0].click
   end
 
+  def ClicarAssineStandard
+    all('span', 'Assinar Standard')[0].click
+  end
 
+end
+
+module Visitar
+  def self.urlClini
+    Capybara.visit("https://www.clinicorp.com/")
+  end
 end

@@ -1,21 +1,23 @@
 require "capybara/rspec"
 
+
 require_relative 'utils.rb'
-World(Utils)
+
+World(Capybara::DSL,Utils,Visitar)
 
 
 #-------------------------------------
 Given('que estou na tela da clinicorp') do
-    visit ("https://www.clinicorp.com/")
+   Visitar.urlClini
 end
 
 When('clico no botão de assine agora') do
-  ClicarSpanText('Assine agora')
+ Utils.ClicarAssineAgora
 
 end
 
 When('e clico plano Standard') do
-  ClicarSpanText('Assinar Standard')
+  Utils.ClicarAssineStandard
 
 end
 
@@ -23,22 +25,12 @@ Then('vejo a tela de login') do
 
   BuscarPorId('fullName', 'Aqui é o bot do teste caramba!!')
   BuscarPorId('clinicName','Testasa')
-
   BuscarPorId('documentNumber','43499284804')
-
   BuscarPorId('email','luiz.martins@clinicorp.com')
-
   BuscarPorId('personalPhone','45984318619')
-
   BuscarPorId('businessPhone','8838575438')
-
   BuscarPorId('cep','58046780')
-
   ClicarSpanText('Buscar Endereço')
-
   BuscarPorId('number','22')
-
   BuscarPorId('address_complement','apt 202')
-
-
 end
