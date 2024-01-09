@@ -30,7 +30,8 @@ Then('vejo a tela de login') do
   BuscarPorId('personalPhone','45984318619')
   BuscarPorId('businessPhone','8838575438')
   BuscarPorId('cep','58046780')
-  ClicarSpanText('Buscar Endereço')
+
+  Utils.ClicarBuscarEndereco
   BuscarPorId('number','22')
   BuscarPorId('address_complement','apt 202')
 end

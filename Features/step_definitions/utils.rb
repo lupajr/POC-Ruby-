@@ -1,18 +1,21 @@
 # utils.rb
 
 module Utils
+  extend Capybara::DSL
   def BuscarPorId(id, value)
     find("##{id}").set(value)
   end
 
-
-
-  def ClicarAssineAgora
-    Capybara.find('span', 'Assine agora')[0].click
+  def self.ClicarAssineAgora
+    all('span', text: 'Assine agora')[0].click
   end
 
-  def ClicarAssineStandard
-    all('span', 'Assinar Standard')[0].click
+  def self.ClicarAssineStandard
+    all('span',text: 'Assinar Standard')[0].click
+  end
+
+  def self.ClicarBuscarEndereco
+    find('span', text: 'Buscar Endereço').click
   end
 
 end
