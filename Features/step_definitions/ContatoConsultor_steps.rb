@@ -14,16 +14,9 @@ end
 
 Then('aparecerá a tela de cadastro') do
     BuscarPorId('input_comp-lfr84vm61','Aqui é o TesteTester')
-
-
-    find_by_id('input_comp-lfvcm08z').set ('Carlos@test.com')
-
-
-    find_by_id('input_comp-lfr84vmc1').set ('83988546596')
-
-
-    find_by_id('input_comp-lftov43t').set ('Acho que é algo aqui')
-
+    BuscarPorId('input_comp-lfvcm08z','Carlos@test.com')
+    BuscarPorId('input_comp-lfr84vmc1','83988546596')
+    BuscarPorId('input_comp-lftov43t','Acho que é algo aqui')
 
     select("5 a 9", from: "collection_comp-lftp3wfm")
 
