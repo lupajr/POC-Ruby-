@@ -3,7 +3,7 @@
 module Utils
   extend Capybara::DSL
   def BuscarPorId(id, value)
-    find("##{id}").set(value)
+    find("#" + id).set(value)
   end
 
   def self.ClicarAssineAgora
@@ -16,6 +16,10 @@ module Utils
 
   def self.ClicarBuscarEndereco
     find('span', text: 'Buscar Endereço').click
+  end
+
+  def self.FaleComConsultor
+    find('span', text: 'Falar com um consultor').click
   end
 
 end

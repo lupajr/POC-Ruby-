@@ -1,12 +1,15 @@
 require "capybara/rspec"
 
+require_relative 'utils.rb'
+
+World(Capybara::DSL,Utils,Visitar)
 
 Given('que clico no botão assine aqui') do
-  first('span', text: 'Assine agora').click
+  Utils.ClicarAssineAgora
 end
 
 When('clico na opção falar com um consultor') do
-  find('span', text: 'Falar com um consultor').click
+  Utils.FaleComConsultor
 end
 
 Then('aparecerá a tela de cadastro') do
@@ -22,10 +25,10 @@ Then('aparecerá a tela de cadastro') do
     find_by_id('input_comp-lftov43t').set ('Acho que é algo aqui')
 
 
-    select("5 a 9", from: "collection_comp-lftp3wfm") # Nao ta clicando
+    select("5 a 9", from: "collection_comp-lftp3wfm")
 
 
-    select("Outro", from: "collection_comp-lkr8jjhx").click # Nao ta clicando
+    select("Outro", from: "collection_comp-lkr8jjhx").click
 
 
 
